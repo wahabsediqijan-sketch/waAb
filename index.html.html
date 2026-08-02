@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>یک دعوت خاص 💌</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&family=Playfair+Display:ital,wght@0,600;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fffaf7;
+    --blush:#ffe3ec;
+    --blush-2:#ffd0e0;
+    --pink:#ffaec4;
+    --rose:#e63950;
+    --rose-deep:#c62141;
+    --deep:#5c2436;
+    --deep-soft:#8a4a5c;
+    --gold:#d9a566;
+    --shadow: 0 20px 60px -15px rgba(198, 33, 65, 0.35);
+    --radius: 28px;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  html,body{
+    height:100%;
+    overflow-x:hidden;
+  }
+
+  body{
+    font-family:'Vazirmatn', sans-serif;
+    background:
+      radial-gradient(circle at 15% 20%, #fff0f4 0%, transparent 45%),
+      radial-gradient(circle at 85% 80%, #ffe8ee 0%, transparent 50%),
+      linear-gradient(180deg, var(--cream) 0%, var(--blush) 100%);
+    color:var(--deep);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    padding:24px;
+  }
+
+  /* ---------- Floating petals / hearts ambient layer ---------- */
+  #petals{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:1;
+    overflow:hidden;
+  }
+  .petal{
+    position:absolute;
+    top:-10%;
+    font-size:18px;
+    opacity:.55;
+    color:var(--rose);
+    animation-name:fall, sway;
+    animation-timing-function:linear, ease-in-out;
+    animation-iteration-count:infinite, infinite;
+    will-change:transform;
+    user-select:none;
+  }
+  @keyframes fall{
+    to{ transform:translateY(115vh); }
+  }
+  @keyframes sway{
+    0%,100%{ margin-inline-start:-25px; }
+    50%{ margin-inline-start:25px; }
+  }
+
+  /* ---------- App shell ---------- */
+  .app{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:640px;
+  }
+
+  .card{
+    position:relative;
+    background:linear-gradient(180deg, #fffdfc 0%, #fff5f8 100%);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    padding:56px 40px 44px;
+    text-align:center;
+    border:1px solid rgba(230,57,80,.12);
+    overflow:hidden;
+    min-height:420px;
+    display:none;
+    animation:enter .7s cubic-bezier(.2,.9,.25,1) both;
+  }
+  .card.active{ display:block; }
+
+  @keyframes enter{
+    from{ opacity:0; transform:translateY(28px) scale(.97); }
+    to{ opacity:1; transform:translateY(0) scale(1); }
+  }
+
+  .card::before{
+    content:"";
+    position:absolute;
+    top:-70px; right:-70px;
+    width:180px; height:180px;
+    background:radial-gradient(circle, var(--blush-2) 0%, transparent 70%);
+    border-radius:50%;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    letter-spacing:.5px;
+    color:var(--rose);
+    background:var(--blush);
+    padding:6px 18px;
+    border-radius:999px;
+    margin-bottom:22px;
+    font-weight:600;
+  }
+
+  h1.question{
+    font-family:'Playfair Display','Vazirmatn',serif;
+    font-style:italic;
+    font-weight:700;
+    font-size:clamp(28px, 6vw, 42px);
+    color:var(--deep);
+    line-height:1.5;
+    margin-bottom:14px;
+  }
+
+  .sub{
+    color:var(--deep-soft);
+    font-size:16px;
+    margin-bottom:36px;
+  }
+
+  /* ---------- Screen 1: buttons ---------- */
+  .choice-zone{
+    position:relative;
+    min-height:180px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:22px;
+    flex-wrap:wrap;
+  }
+
+  .btn{
+    border:none;
+    cursor:pointer;
+    font-family:'Vazirmatn', sans-serif;
+    font-weight:700;
+    font-size:18px;
+    border-radius:18px;
+    padding:16px 34px;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+
+  .btn-yes{
+    background:linear-gradient(135deg, var(--rose) 0%, var(--rose-deep) 100%);
+    color:#fff;
+    box-shadow:0 14px 30px -10px rgba(198,33,65,.55);
+  }
+  .btn-yes:hover{ transform:translateY(-3px) scale(1.04); box-shadow:0 18px 34px -8px rgba(198,33,65,.6); }
+  .btn-yes:active{ transform:translateY(0) scale(.98); }
+
+  .btn-no{
+    position:absolute;
+    background:#fff;
+    color:var(--deep-soft);
+    border:2px solid var(--blush-2);
+    transition:transform .16s ease, top .28s cubic-bezier(.3,1,.4,1), left .28s cubic-bezier(.3,1,.4,1);
+  }
+
+  .flirty-note{
+    margin-top:30px;
+    font-size:15px;
+    color:var(--rose-deep);
+    font-weight:600;
+  }
+
+  /* ---------- Screen 2: date/time ---------- */
+  .field-group{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    max-width:340px;
+    margin:0 auto 30px;
+  }
+  .field{
+    text-align:right;
+  }
+  .field label{
+    display:block;
+    font-size:14px;
+    color:var(--deep-soft);
+    margin-bottom:8px;
+    font-weight:600;
+  }
+  .field input{
+    width:100%;
+    font-family:'Vazirmatn', sans-serif;
+    font-size:16px;
+    padding:14px 16px;
+    border-radius:14px;
+    border:2px solid var(--blush-2);
+    background:#fff;
+    color:var(--deep);
+    outline:none;
+    transition:border-color .2s ease, box-shadow .2s ease;
+  }
+  .field input:focus{
+    border-color:var(--rose);
+    box-shadow:0 0 0 4px rgba(230,57,80,.12);
+  }
+
+  .btn-primary{
+    background:linear-gradient(135deg, var(--rose) 0%, var(--rose-deep) 100%);
+    color:#fff;
+    box-shadow:0 14px 30px -10px rgba(198,33,65,.5);
+    width:100%;
+    max-width:340px;
+  }
+  .btn-primary:hover{ transform:translateY(-2px); }
+  .btn-primary:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+    transform:none;
+    box-shadow:none;
+  }
+
+  /* ---------- Screen 3: food cards ---------- */
+  .food-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:16px;
+    margin-bottom:30px;
+  }
+  @media (min-width:520px){
+    .food-grid{ grid-template-columns:repeat(4, 1fr); }
+  }
+
+  .food-card{
+    cursor:pointer;
+    border-radius:18px;
+    overflow:hidden;
+    background:#fff;
+    border:3px solid transparent;
+    box-shadow:0 8px 22px -10px rgba(92,36,54,.25);
+    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+    position:relative;
+  }
+  .food-card:hover{ transform:translateY(-4px); }
+  .food-card.selected{
+    border-color:var(--rose);
+    box-shadow:0 14px 28px -8px rgba(230,57,80,.45);
+  }
+  .food-card.selected::after{
+    content:"❤";
+    position:absolute;
+    top:6px; left:6px;
+    background:var(--rose);
+    color:#fff;
+    width:26px; height:26px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+  }
+  .food-card img{
+    width:100%;
+    height:110px;
+    object-fit:cover;
+    display:block;
+  }
+  .food-card .name{
+    padding:10px 6px;
+    font-size:14px;
+    font-weight:700;
+    color:var(--deep);
+  }
+
+  /* ---------- Screen 4: final ---------- */
+  .final-heart{
+    font-size:44px;
+    margin-bottom:6px;
+    animation:pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{ transform:scale(1); }
+    50%{ transform:scale(1.15); }
+  }
+  .summary{
+    background:var(--blush);
+    border-radius:18px;
+    padding:20px 24px;
+    margin:26px auto;
+    max-width:360px;
+    text-align:right;
+    font-size:15px;
+    color:var(--deep);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .summary .row{ display:flex; justify-content:space-between; gap:10px; }
+  .summary .row b{ color:var(--rose-deep); }
+
+  .final-food{
+    width:180px;
+    height:130px;
+    object-fit:cover;
+    border-radius:16px;
+    margin:14px auto 0;
+    box-shadow:0 14px 30px -10px rgba(92,36,54,.4);
+    display:block;
+  }
+
+  .footnote{
+    margin-top:28px;
+    font-size:13px;
+    color:var(--deep-soft);
+    opacity:.85;
+  }
+
+  @media (max-width:480px){
+    .card{ padding:40px 22px 34px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<div id="petals"></div>
+
+<div class="app">
+
+  <!-- Screen 1 -->
+  <section class="card active" id="screen-1">
+    <span class="eyebrow">💌 یک دعوت خاص</span>
+    <h1 class="question">با من میایی بریم رستورانت؟</h1>
+    <p class="sub">فقط یک سوال ساده است و جواب هم فقط یکی است 😒</p>
+
+    <div class="choice-zone" id="choiceZone">
+      <button class="btn btn-yes" id="yesBtn">✅ بلی</button>
+      <button class="btn btn-no" id="noBtn" style="position:relative;">❌ نخیر</button>
+    </div>
+
+    <p class="flirty-note">فکراتو بکن چوچه مقبولم😛</p>
+  </section>
+
+  <!-- Screen 2 -->
+  <section class="card" id="screen-2">
+    <span class="eyebrow">🗓️ مرحله دوم</span>
+    <h1 class="question">کی وقت داری؟</h1>
+    <p class="sub">یک تاریخ و ساعت خوب برایم انتخاب کو</p>
+
+    <div class="field-group">
+      <div class="field">
+        <label for="dateInput">تاریخ</label>
+        <input type="date" id="dateInput">
+      </div>
+      <div class="field">
+        <label for="timeInput">ساعت</label>
+        <input type="time" id="timeInput">
+      </div>
+    </div>
+
+    <button class="btn btn-primary" id="toStep3" disabled>برویم بعدی 💫</button>
+  </section>
+
+  <!-- Screen 3 -->
+  <section class="card" id="screen-3">
+    <span class="eyebrow">🍽️ مرحله سوم</span>
+    <h1 class="question">چی سفارش میدهی؟</h1>
+    <p class="sub">یکی رو انتخاب کن</p>
+
+    <div class="food-grid" id="foodGrid">
+      <div class="food-card" data-food="جگر" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Preparing_lamb_liver_kebab..._(2044761712).jpg?width=500">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Preparing_lamb_liver_kebab..._(2044761712).jpg?width=500" alt="جگر" loading="lazy">
+        <div class="name">🥩 جگر</div>
+      </div>
+      <div class="food-card" data-food="قهوه" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/A_small_cup_of_coffee.JPG?width=500">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/A_small_cup_of_coffee.JPG?width=500" alt="قهوه" loading="lazy">
+        <div class="name">☕ قهوه</div>
+      </div>
+      <div class="food-card" data-food="پیزا" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Pizza.jpg?width=500">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pizza.jpg?width=500" alt="پیزا" loading="lazy">
+        <div class="name">🍕 پیزا</div>
+      </div>
+      <div class="food-card" data-food="کباب" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Persian_kebab_barbequed_in_skewers_bbq_Iran.jpg?width=500">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Persian_kebab_barbequed_in_skewers_bbq_Iran.jpg?width=500" alt="کباب" loading="lazy">
+        <div class="name">🍖 کباب</div>
+      </div>
+    </div>
+
+    <button class="btn btn-primary" id="toStep4" disabled>بریم که بریم 🚗💨</button>
+  </section>
+
+  <!-- Screen 4 -->
+  <section class="card" id="screen-4">
+    <div class="final-heart">❤️</div>
+    <h1 class="question">خوشحالم که درخواست مره قبول کردی ❤️</h1>
+
+    <div class="summary">
+      <div class="row"><span>📅 تاریخ انتخاب شده:</span><b id="outDate">—</b></div>
+      <div class="row"><span>⏰ ساعت انتخاب شده:</span><b id="outTime">—</b></div>
+      <div class="row"><span>🍽️ غذای انتخاب شده:</span><b id="outFood">—</b></div>
+    </div>
+
+    <p class="sub">میایم دنبالت برای خوردن <span id="outFoodInline" style="color:var(--rose-deep); font-weight:700;">—</span> 😍</p>
+    <img class="final-food" id="outFoodImg" src="" alt="غذای انتخاب شده">
+
+    <p class="footnote">برای اینکه ازت درخواست کنم یک ویبسایت طراحی کردم چیزی نبود 🙈</p>
+  </section>
+
+</div>
+
+<script>
+  // ---------------- Ambient floating petals ----------------
+  (function(){
+    const container = document.getElementById('petals');
+    const symbols = ['❤','💗','🌸','❤','💕'];
+    const count = window.innerWidth < 600 ? 14 : 22;
+    for(let i=0;i<count;i++){
+      const el = document.createElement('div');
+      el.className = 'petal';
+      el.textContent = symbols[Math.floor(Math.random()*symbols.length)];
+      const left = Math.random()*100;
+      const duration = 9 + Math.random()*10;
+      const swayDuration = 3 + Math.random()*3;
+      const delay = Math.random()*-20;
+      const size = 14 + Math.random()*14;
+      el.style.left = left + 'vw';
+      el.style.fontSize = size + 'px';
+      el.style.animationDuration = duration + 's, ' + swayDuration + 's';
+      el.style.animationDelay = delay + 's, ' + delay + 's';
+      container.appendChild(el);
+    }
+  })();
+
+  // ---------------- Screen navigation ----------------
+  function goTo(id){
+    document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+
+  // ---------------- Screen 1: runaway "no" button ----------------
+  const yesBtn = document.getElementById('yesBtn');
+  const noBtn = document.getElementById('noBtn');
+  const zone = document.getElementById('choiceZone');
+
+  function runAway(){
+    const zoneRect = zone.getBoundingClientRect();
+    const btnRect = noBtn.getBoundingClientRect();
+    const maxX = Math.max(zoneRect.width - btnRect.width - 8, 8);
+    const maxY = Math.max(zoneRect.height - btnRect.height - 8, 8);
+    const newX = Math.random() * maxX;
+    const newY = Math.random() * maxY;
+    noBtn.style.position = 'absolute';
+    noBtn.style.left = newX + 'px';
+    noBtn.style.top = newY + 'px';
+  }
+
+  ['mouseenter','pointerdown','touchstart','click'].forEach(evt=>{
+    noBtn.addEventListener(evt, function(e){
+      e.preventDefault();
+      runAway();
+    }, {passive:false});
+  });
+
+  yesBtn.addEventListener('click', () => goTo('screen-2'));
+
+  // ---------------- Screen 2: date & time ----------------
+  const dateInput = document.getElementById('dateInput');
+  const timeInput = document.getElementById('timeInput');
+  const toStep3 = document.getElementById('toStep3');
+
+  function checkStep2(){
+    toStep3.disabled = !(dateInput.value && timeInput.value);
+  }
+  dateInput.addEventListener('input', checkStep2);
+  timeInput.addEventListener('input', checkStep2);
+
+  toStep3.addEventListener('click', () => goTo('screen-3'));
+
+  // ---------------- Screen 3: food selection ----------------
+  let selectedFood = null;
+  let selectedFoodImg = null;
+  const foodCards = document.querySelectorAll('.food-card');
+  const toStep4 = document.getElementById('toStep4');
+
+  foodCards.forEach(card => {
+    card.addEventListener('click', () => {
+      foodCards.forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      selectedFood = card.dataset.food;
+      selectedFoodImg = card.dataset.img;
+      toStep4.disabled = false;
+    });
+  });
+
+  toStep4.addEventListener('click', () => {
+    // format date nicely
+    let dateText = dateInput.value;
+    try{
+      const d = new Date(dateInput.value);
+      dateText = d.toLocaleDateString('fa-IR');
+    }catch(e){}
+
+    document.getElementById('outDate').textContent = dateText || '—';
+    document.getElementById('outTime').textContent = timeInput.value || '—';
+    document.getElementById('outFood').textContent = selectedFood || '—';
+    document.getElementById('outFoodInline').textContent = selectedFood || '—';
+    document.getElementById('outFoodImg').src = selectedFoodImg || '';
+    goTo('screen-4');
+  });
+</script>
+
+</body>
+</html>
