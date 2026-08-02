@@ -206,17 +206,37 @@
     width:100%;
     font-family:'Vazirmatn', sans-serif;
     font-size:16px;
-    padding:14px 16px;
+    padding:14px 44px 14px 16px;
     border-radius:14px;
     border:2px solid var(--blush-2);
     background:#fff;
     color:var(--deep);
     outline:none;
     transition:border-color .2s ease, box-shadow .2s ease;
+    color-scheme:light;
+    min-height:52px;
   }
   .field input:focus{
     border-color:var(--rose);
     box-shadow:0 0 0 4px rgba(230,57,80,.12);
+  }
+  /* Native date/time widgets break inside an RTL page on many mobile browsers —
+     force LTR rendering for these two fields so the picker segments display correctly. */
+  .field input[type="date"],
+  .field input[type="time"]{
+    direction:ltr;
+    text-align:right;
+  }
+  .field{
+    position:relative;
+  }
+  .field .field-icon{
+    position:absolute;
+    left:16px;
+    top:41px;
+    font-size:19px;
+    pointer-events:none;
+    opacity:.7;
   }
 
   .btn-primary{
@@ -369,10 +389,12 @@
       <div class="field">
         <label for="dateInput">تاریخ</label>
         <input type="date" id="dateInput">
+        <span class="field-icon">📅</span>
       </div>
       <div class="field">
         <label for="timeInput">ساعت</label>
         <input type="time" id="timeInput">
+        <span class="field-icon">🕐</span>
       </div>
     </div>
 
