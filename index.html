@@ -2,600 +2,884 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>❤️ یک دعوت خاص  برای پری❤️💌</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="description" content="یک دعوت‌نامه سینمایی و عاشقانه برای رفتن به رستورانت — یک سوال، یک جواب.">
+<meta name="theme-color" content="#c94f6d">
+<meta property="og:title" content="❤️ دعوت رستورانت ❤️">
+<meta property="og:description" content="یک سوال ساده... با یک جواب.">
+<title>❤️ Restaurant Invitation ❤️</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:ital,wght@0,300;0,400;0,500;0,600;0,700;1,500&family=Playfair+Display:ital,wght@0,600;1,600;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --cream:#fffaf7;
-    --blush:#ffe3ec;
-    --blush-2:#ffd0e0;
-    --pink:#ffaec4;
-    --rose:#e63950;
-    --rose-deep:#c62141;
-    --deep:#5c2436;
-    --deep-soft:#8a4a5c;
-    --gold:#d9a566;
-    --shadow: 0 20px 60px -15px rgba(198, 33, 65, 0.35);
-    --radius: 28px;
-  }
+:root{
+  --pink:#ffb3c6;
+  --pink-soft:#ffd7e2;
+  --rose-gold:#d9a679;
+  --rose-gold-light:#f2dfc4;
+  --purple:#c9a7e8;
+  --purple-soft:#e6d6f7;
+  --red-soft:#e8677f;
+  --red-deep:#c9425c;
+  --plum:#3a1730;
+  --plum-2:#5c2a47;
+  --cream:#fff7f9;
+  --glass:rgba(255,255,255,.38);
+  --glass-strong:rgba(255,255,255,.55);
+  --glass-border:rgba(255,255,255,.7);
+  --shadow-soft:0 20px 60px rgba(201,66,92,.16);
+  --shadow-deep:0 40px 90px rgba(58,23,48,.28);
+  --glow:0 0 0 1px rgba(255,255,255,.5) inset, 0 0 40px rgba(201,167,121,.35);
+  --font-display:'Great Vibes', cursive;
+  --font-body:'Vazirmatn','Poppins',sans-serif;
+  --ease:cubic-bezier(.22,.9,.28,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--font-body);
+  background:
+    radial-gradient(ellipse 60% 40% at 20% 10%, rgba(255,179,198,.55), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 85% 8%, rgba(201,167,232,.4), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(232,103,127,.28), transparent 60%),
+    linear-gradient(165deg, var(--cream) 0%, var(--pink-soft) 40%, var(--purple-soft) 75%, var(--pink-soft) 100%);
+  min-height:100vh;
+  color:var(--plum);
+  overflow-x:hidden;
+  position:relative;
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important;}
+}
+::selection{background:var(--red-soft); color:#fff;}
 
-  *{ box-sizing:border-box; margin:0; padding:0; }
+/* ---------- Cinematic background layers ---------- */
+#bg-layer{position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none;}
+.light-ray{
+  position:absolute; top:-20%; width:38vw; height:160vh; opacity:.28;
+  background:linear-gradient(180deg, rgba(255,255,255,.9), rgba(255,255,255,0) 70%);
+  filter:blur(18px); transform-origin:top center; animation:raySway 16s ease-in-out infinite;
+}
+.light-ray.r1{left:8%; transform:rotate(12deg); animation-delay:0s;}
+.light-ray.r2{left:45%; transform:rotate(-8deg); animation-delay:-6s; opacity:.2;}
+.light-ray.r3{left:75%; transform:rotate(18deg); animation-delay:-10s; opacity:.22;}
+@keyframes raySway{0%,100%{transform:rotate(12deg) translateX(0);} 50%{transform:rotate(6deg) translateX(30px);}}
 
-  html,body{
-    height:100%;
-    overflow-x:hidden;
-  }
+.star{position:absolute; border-radius:50%; background:#fff; box-shadow:0 0 6px rgba(255,255,255,.9); animation:twinkle ease-in-out infinite;}
+@keyframes twinkle{0%,100%{opacity:.15; transform:scale(.7);} 50%{opacity:.95; transform:scale(1.15);}}
 
-  body{
-    font-family:'Vazirmatn', sans-serif;
-    background:
-      radial-gradient(circle at 15% 20%, #fff0f4 0%, transparent 45%),
-      radial-gradient(circle at 85% 80%, #ffe8ee 0%, transparent 50%),
-      linear-gradient(180deg, var(--cream) 0%, var(--blush) 100%);
-    color:var(--deep);
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-    padding:24px;
-  }
+#hearts-bg, #sparkles-bg, #petals-bg{position:fixed; inset:0; pointer-events:none; z-index:2; overflow:hidden;}
+.floating-heart{position:absolute; bottom:-10%; font-size:22px; opacity:.55; animation:floatUp linear forwards; filter:drop-shadow(0 4px 6px rgba(201,66,92,.25));}
+@keyframes floatUp{
+  0%{transform:translateY(0) translateX(0) rotate(0deg); opacity:0;}
+  10%{opacity:.65;} 90%{opacity:.5;}
+  100%{transform:translateY(-115vh) translateX(var(--drift,20px)) rotate(360deg); opacity:0;}
+}
+.petal{position:absolute; top:-8%; font-size:20px; opacity:.7; animation:petalFall linear forwards;}
+@keyframes petalFall{
+  0%{transform:translateY(0) translateX(0) rotate(0deg); opacity:0;}
+  8%{opacity:.8;}
+  100%{transform:translateY(112vh) translateX(var(--drift,60px)) rotate(340deg); opacity:0;}
+}
+.sparkle{position:absolute; font-size:14px; opacity:0; animation:sparklePop ease-in-out infinite;}
+@keyframes sparklePop{0%,100%{opacity:0; transform:scale(.3);} 50%{opacity:.9; transform:scale(1);}}
+#cursor-trail{position:fixed; z-index:9999; pointer-events:none;}
 
-  /* ---------- Floating petals / hearts ambient layer ---------- */
-  #petals{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:1;
-    overflow:hidden;
-  }
-  .petal{
-    position:absolute;
-    top:-10%;
-    font-size:18px;
-    opacity:.55;
-    color:var(--rose);
-    animation-name:fall, sway;
-    animation-timing-function:linear, ease-in-out;
-    animation-iteration-count:infinite, infinite;
-    will-change:transform;
-    user-select:none;
-  }
-  @keyframes fall{
-    to{ transform:translateY(115vh); }
-  }
-  @keyframes sway{
-    0%,100%{ margin-inline-start:-25px; }
-    50%{ margin-inline-start:25px; }
-  }
+/* ---------- Loading screen ---------- */
+#loading-screen{
+  position:fixed; inset:0; z-index:10000;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(255,255,255,.12), transparent 55%),
+    linear-gradient(160deg,var(--red-deep),#8a2648 55%, var(--plum));
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:26px;
+  transition:opacity .9s var(--ease), visibility .9s var(--ease), filter .9s var(--ease);
+}
+#loading-screen.hidden{opacity:0; visibility:hidden; filter:blur(20px); pointer-events:none;}
+.load-heart{font-size:76px; animation:beat 1.1s ease-in-out infinite; filter:drop-shadow(0 12px 30px rgba(0,0,0,.4));}
+@keyframes beat{0%,100%{transform:scale(1);} 22%{transform:scale(1.3);} 38%{transform:scale(.92);} 58%{transform:scale(1.18);}}
+.load-text{color:#fff; font-family:var(--font-display); font-size:32px; letter-spacing:1px; opacity:.95;}
+.load-bar{width:220px; height:3px; background:rgba(255,255,255,.22); border-radius:10px; overflow:hidden;}
+.load-bar-fill{height:100%; width:0%; background:linear-gradient(90deg,#fff,var(--rose-gold-light)); border-radius:10px; animation:loadFill 1.9s var(--ease) forwards;}
+@keyframes loadFill{to{width:100%;}}
 
-  /* ---------- App shell ---------- */
-  .app{
-    position:relative;
-    z-index:2;
-    width:100%;
-    max-width:640px;
-  }
+/* ---------- Top / floating controls ---------- */
+.music-float{
+  position:fixed; top:20px; inset-inline-start:20px; z-index:500;
+  display:flex; align-items:center; gap:10px; padding:12px 20px 12px 16px;
+  border-radius:50px; border:1px solid var(--glass-border); background:var(--glass-strong);
+  backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+  box-shadow:var(--shadow-soft); cursor:pointer; font-family:var(--font-body); font-weight:600; font-size:13px;
+  color:var(--plum); transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.music-float:hover{transform:translateY(-3px) scale(1.03); box-shadow:var(--shadow-deep);}
+.music-float:active{transform:scale(.96);}
+.music-float .icon{font-size:18px; animation:musicIdle 2.4s ease-in-out infinite;}
+@keyframes musicIdle{0%,100%{transform:rotate(0deg);} 50%{transform:rotate(-8deg);}}
+.music-float.playing .icon{animation:musicPlaying .6s ease-in-out infinite;}
+@keyframes musicPlaying{0%,100%{transform:scale(1);} 50%{transform:scale(1.25);}}
 
-  .card{
-    position:relative;
-    background:linear-gradient(180deg, #fffdfc 0%, #fff5f8 100%);
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    padding:56px 40px 44px;
-    text-align:center;
-    border:1px solid rgba(230,57,80,.12);
-    overflow:hidden;
-    min-height:420px;
-    display:none;
-    animation:enter .7s cubic-bezier(.2,.9,.25,1) both;
-  }
-  .card.active{ display:block; }
+.progress-dots{position:fixed; top:20px; inset-inline-end:20px; z-index:500; display:flex; gap:8px; background:var(--glass-strong); border:1px solid var(--glass-border); backdrop-filter:blur(16px); padding:9px 14px; border-radius:30px; box-shadow:var(--shadow-soft);}
+.progress-dots span{width:8px; height:8px; border-radius:50%; background:rgba(201,66,92,.25); transition:all .4s var(--ease);}
+.progress-dots span.active{background:var(--red-deep); width:24px; border-radius:6px; box-shadow:0 0 10px rgba(201,66,92,.5);}
 
-  @keyframes enter{
-    from{ opacity:0; transform:translateY(28px) scale(.97); }
-    to{ opacity:1; transform:translateY(0) scale(1); }
-  }
+/* ---------- Page shell + cinematic transitions ---------- */
+.page{
+  min-height:100vh; width:100%; display:none; align-items:center; justify-content:center;
+  padding:110px 18px 60px; position:relative; z-index:5;
+}
+.page.active{display:flex;}
+.page.enter{animation:pageIn .9s var(--ease) both;}
+@keyframes pageIn{
+  0%{opacity:0; transform:translateY(40px) scale(.94); filter:blur(14px);}
+  60%{filter:blur(2px);}
+  100%{opacity:1; transform:translateY(0) scale(1); filter:blur(0);}
+}
+.page.leave{animation:pageOut .5s var(--ease) both;}
+@keyframes pageOut{
+  0%{opacity:1; transform:scale(1); filter:blur(0);}
+  100%{opacity:0; transform:scale(1.05); filter:blur(14px);}
+}
 
-  .card::before{
-    content:"";
-    position:absolute;
-    top:-70px; right:-70px;
-    width:180px; height:180px;
-    background:radial-gradient(circle, var(--blush-2) 0%, transparent 70%);
-    border-radius:50%;
-  }
+.hero-heart{
+  font-size:56px; text-align:center; margin-bottom:14px; animation:heroBeat 2.2s ease-in-out infinite;
+  filter:drop-shadow(0 10px 20px rgba(201,66,92,.35));
+}
+@keyframes heroBeat{0%,100%{transform:scale(1);} 50%{transform:scale(1.12);}}
 
-  .eyebrow{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    font-size:13px;
-    letter-spacing:.5px;
-    color:var(--rose);
-    background:var(--blush);
-    padding:6px 18px;
-    border-radius:999px;
-    margin-bottom:22px;
-    font-weight:600;
-  }
+.card{
+  width:100%; max-width:640px; background:var(--glass); border:1px solid var(--glass-border);
+  backdrop-filter:blur(22px) saturate(160%); -webkit-backdrop-filter:blur(22px) saturate(160%);
+  border-radius:34px; padding:56px 40px; text-align:center; box-shadow:var(--shadow-deep);
+  position:relative; overflow:hidden;
+}
+.card::before{
+  content:''; position:absolute; inset:0; border-radius:34px; padding:1.5px;
+  background:linear-gradient(135deg, rgba(255,255,255,.95), rgba(217,166,121,.55), rgba(255,255,255,.15));
+  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none;
+}
+.card::after{
+  content:''; position:absolute; top:-40%; left:-20%; width:60%; height:60%;
+  background:radial-gradient(circle, rgba(255,255,255,.5), transparent 70%);
+  pointer-events:none; filter:blur(10px);
+}
+.eyebrow{
+  display:inline-block; font-size:12px; letter-spacing:3px; color:var(--red-deep);
+  background:rgba(232,103,127,.1); padding:7px 18px; border-radius:20px; margin-bottom:20px;
+  font-weight:700; border:1px solid rgba(232,103,127,.18);
+}
+h1.title-main{
+  font-family:var(--font-body); font-weight:800; font-size:clamp(24px,5vw,34px);
+  color:var(--plum); line-height:1.45; margin-bottom:14px; letter-spacing:-.3px;
+}
+.subtitle{font-size:clamp(14px,2.6vw,17px); color:var(--plum-2); opacity:.85; margin-bottom:36px; font-weight:400;}
 
-  h1.question{
-    font-family:'Playfair Display','Vazirmatn',serif;
-    font-style:italic;
-    font-weight:700;
-    font-size:clamp(28px, 6vw, 42px);
-    color:var(--deep);
-    line-height:1.5;
-    margin-bottom:14px;
-  }
+/* buttons */
+.btn-row{display:flex; gap:20px; justify-content:center; flex-wrap:wrap; position:relative; margin-bottom:28px;}
+.btn{
+  border:none; cursor:pointer; font-family:var(--font-body); font-weight:700; font-size:16px;
+  padding:17px 36px; border-radius:50px; transition:transform .3s var(--ease), box-shadow .3s var(--ease);
+  box-shadow:0 12px 28px rgba(201,66,92,.28);
+}
+.btn-yes{
+  background:linear-gradient(135deg,var(--red-deep),var(--red-soft)); color:#fff; position:relative; z-index:2;
+}
+.btn-yes::after{content:''; position:absolute; inset:0; border-radius:50px; box-shadow:0 0 0 0 rgba(232,103,127,.5); animation:pulseRing 2.4s ease-out infinite;}
+@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(232,103,127,.45);} 100%{box-shadow:0 0 0 18px rgba(232,103,127,0);}}
+.btn-yes:hover{transform:translateY(-5px) scale(1.06); box-shadow:0 20px 40px rgba(201,66,92,.4);}
+.btn-yes:active{transform:translateY(0) scale(.97);}
+.btn-no{
+  background:#fff; color:var(--plum); border:2px solid var(--pink-soft);
+  position:fixed; z-index:50; transition: top .22s var(--ease), left .22s var(--ease), transform .2s var(--ease);
+}
+.btn-no.static-pos{position:relative; z-index:2;}
+.hint-text{font-family:var(--font-body); font-weight:600; font-size:14.5px; color:var(--red-deep); margin-top:8px; min-height:44px; display:flex; align-items:center; justify-content:center; text-align:center; line-height:1.5;}
+.footer-line{margin-top:10px; font-family:var(--font-display); font-size:24px; color:var(--rose-gold); opacity:.95;}
 
-  .sub{
-    color:var(--deep-soft);
-    font-size:16px;
-    margin-bottom:36px;
-  }
+.btn-primary{
+  background:linear-gradient(135deg,var(--red-deep),var(--rose-gold)); color:#fff; border:none; cursor:pointer;
+  font-family:var(--font-body); font-weight:700; font-size:16px; padding:17px 42px; border-radius:50px;
+  box-shadow:0 14px 32px rgba(201,66,92,.3); transition:transform .35s var(--ease), box-shadow .35s var(--ease), opacity .35s;
+  margin-top:12px;
+}
+.btn-primary:disabled{opacity:.35; cursor:not-allowed; filter:grayscale(.4); box-shadow:none;}
+.btn-primary:not(:disabled):hover{transform:translateY(-5px) scale(1.05); box-shadow:0 22px 44px rgba(201,66,92,.42);}
+.btn-primary:not(:disabled):active{transform:translateY(0) scale(.97);}
 
-  /* ---------- Screen 1: buttons ---------- */
-  .choice-zone{
-    position:relative;
-    min-height:180px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:22px;
-    flex-wrap:wrap;
-  }
+/* Page 2 */
+.picker-group{display:flex; flex-direction:column; gap:18px; margin-bottom:18px; text-align:right;}
+.field{
+  background:rgba(255,255,255,.75); border-radius:20px; padding:17px 22px; box-shadow:0 10px 24px rgba(201,66,92,.1);
+  border:1.5px solid var(--pink-soft); text-align:right; transition:border-color .3s, box-shadow .3s;
+}
+.field:focus-within{border-color:var(--red-deep); box-shadow:var(--glow);}
+.field label{display:block; font-size:12px; color:var(--red-deep); font-weight:700; margin-bottom:9px; letter-spacing:.5px;}
+.field input{width:100%; border:none; outline:none; font-family:var(--font-body); font-size:16px; color:var(--plum); background:transparent;}
+.confirm-msg{font-family:var(--font-body); font-weight:600; font-size:17px; color:var(--red-deep); margin:16px 0 4px; opacity:0; height:0; overflow:hidden; transition:opacity .5s var(--ease);}
+.confirm-msg.show{opacity:1; height:auto; margin-bottom:14px;}
 
-  .btn{
-    border:none;
-    cursor:pointer;
-    font-family:'Vazirmatn', sans-serif;
-    font-weight:700;
-    font-size:18px;
-    border-radius:18px;
-    padding:16px 34px;
-    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
-  }
+/* Page 3: luxury food cards */
+.food-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-bottom:28px;}
+.food-card{
+  background:rgba(255,255,255,.8); border-radius:24px; padding:16px; cursor:pointer; border:2.5px solid transparent;
+  box-shadow:0 12px 28px rgba(201,66,92,.14); transition:transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s;
+  position:relative; overflow:hidden;
+}
+.food-card:hover{transform:translateY(-8px) scale(1.035); box-shadow:0 24px 44px rgba(201,66,92,.3), var(--glow);}
+.food-card.selected{border-color:#3ecf7a; box-shadow:0 24px 44px rgba(62,207,122,.35), 0 0 0 3px rgba(62,207,122,.25) inset;}
+.food-card.selected::after{
+  content:'✓'; position:absolute; top:12px; inset-inline-end:12px; width:28px; height:28px; border-radius:50%;
+  background:#3ecf7a; color:#fff; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:900;
+  animation:popIn .35s cubic-bezier(.2,.9,.3,1.5); box-shadow:0 4px 12px rgba(62,207,122,.5);
+}
+@keyframes popIn{from{transform:scale(0) rotate(-90deg);} to{transform:scale(1) rotate(0);}}
+.food-img{width:100%; height:112px; border-radius:17px; overflow:hidden; margin-bottom:11px; background:var(--pink-soft); transition:transform .4s var(--ease); display:flex; align-items:center; justify-content:center;}
+.food-img svg{width:100%; height:100%; display:block;}
+.food-card:hover .food-img{transform:scale(1.05);}
+.food-name{font-weight:700; font-size:15px; color:var(--plum);}
+.food-emoji{font-size:27px; display:block; margin-bottom:3px;}
 
-  .btn-yes{
-    background:linear-gradient(135deg, var(--rose) 0%, var(--rose-deep) 100%);
-    color:#fff;
-    box-shadow:0 14px 30px -10px rgba(198,33,65,.55);
-  }
-  .btn-yes:hover{ transform:translateY(-3px) scale(1.04); box-shadow:0 18px 34px -8px rgba(198,33,65,.6); }
-  .btn-yes:active{ transform:translateY(0) scale(.98); }
+/* Page 4 */
+.final-card{max-width:660px;}
+.balloon-layer, .confetti-layer, .emoji-rain{position:fixed; inset:0; pointer-events:none; z-index:60; overflow:hidden;}
+.balloon{position:absolute; bottom:-140px; font-size:54px; animation:balloonUp 6.5s ease-in forwards; filter:drop-shadow(0 10px 12px rgba(0,0,0,.15));}
+@keyframes balloonUp{0%{transform:translateY(0) translateX(0) rotate(-4deg);} 50%{transform:translateY(-55vh) translateX(30px) rotate(4deg);} 100%{transform:translateY(-125vh) translateX(-20px) rotate(-4deg); opacity:0;}}
+.confetti-piece{position:absolute; top:-5%; border-radius:2px; animation:confettiFall linear forwards;}
+@keyframes confettiFall{0%{transform:translateY(0) rotate(0deg); opacity:1;} 100%{transform:translateY(110vh) rotate(720deg); opacity:.85;}}
+.rain-emoji{position:absolute; top:-8%; font-size:25px; animation:rainFall linear forwards;}
+@keyframes rainFall{0%{transform:translateY(0) rotate(0deg);} 100%{transform:translateY(115vh) rotate(300deg);}}
 
-  .btn-no{
-    position:absolute;
-    background:#fff;
-    color:var(--deep-soft);
-    border:2px solid var(--blush-2);
-    transition:transform .16s ease, top .28s cubic-bezier(.3,1,.4,1), left .28s cubic-bezier(.3,1,.4,1);
-  }
+.date-summary{display:flex; justify-content:center; gap:26px; flex-wrap:wrap; margin:24px 0;}
+.summary-chip{background:rgba(255,255,255,.85); border-radius:18px; padding:15px 24px; box-shadow:0 10px 24px rgba(201,66,92,.12); font-weight:700; color:var(--plum); display:flex; align-items:center; gap:9px; font-size:15px;}
+.selected-food-img{width:160px; height:160px; border-radius:26px; margin:20px auto; box-shadow:0 22px 44px rgba(201,66,92,.3); display:flex; align-items:center; justify-content:center; overflow:hidden; border:4px solid #fff; background:var(--pink-soft);}
+.selected-food-img svg{width:100%; height:100%; display:block;}
+.thankyou{font-family:var(--font-display); font-size:27px; color:var(--rose-gold); margin-top:20px; animation:gentlePulse 2.5s ease-in-out infinite;}
+@keyframes gentlePulse{0%,100%{opacity:.85;} 50%{opacity:1; transform:scale(1.02);}}
 
-  .flirty-note{
-    margin-top:30px;
-    font-size:15px;
-    color:var(--rose-deep);
-    font-weight:600;
-  }
+footer{position:relative; z-index:6; text-align:center; padding:36px 18px 96px; color:var(--plum-2); font-size:14px;}
+footer .made-by{font-family:var(--font-display); font-size:23px; color:var(--red-deep); margin-bottom:9px;}
+footer .wa-link{color:var(--rose-gold); font-weight:700; text-decoration:none; direction:ltr; display:inline-block; transition:color .2s;}
+footer .wa-link:hover{color:var(--red-deep); text-decoration:underline;}
 
-  /* ---------- Screen 2: date/time ---------- */
-  .field-group{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-    max-width:340px;
-    margin:0 auto 30px;
-  }
-  .field{
-    text-align:right;
-  }
-  .field label{
-    display:block;
-    font-size:14px;
-    color:var(--deep-soft);
-    margin-bottom:8px;
-    font-weight:600;
-  }
-  .field input{
-    width:100%;
-    font-family:'Vazirmatn', sans-serif;
-    font-size:16px;
-    padding:14px 44px 14px 16px;
-    border-radius:14px;
-    border:2px solid var(--blush-2);
-    background:#fff;
-    color:var(--deep);
-    outline:none;
-    transition:border-color .2s ease, box-shadow .2s ease;
-    color-scheme:light;
-    min-height:52px;
-  }
-  .field input:focus{
-    border-color:var(--rose);
-    box-shadow:0 0 0 4px rgba(230,57,80,.12);
-  }
-  /* Native date/time widgets break inside an RTL page on many mobile browsers —
-     force LTR rendering for these two fields so the picker segments display correctly. */
-  .field input[type="date"],
-  .field input[type="time"]{
-    direction:ltr;
-    text-align:right;
-  }
-  .field{
-    position:relative;
-  }
-  .field .field-icon{
-    position:absolute;
-    left:16px;
-    top:41px;
-    font-size:19px;
-    pointer-events:none;
-    opacity:.7;
-  }
+.wa-float{
+  position:fixed; bottom:24px; inset-inline-end:24px; z-index:400; width:60px; height:60px; border-radius:50%;
+  background:#25D366; display:flex; align-items:center; justify-content:center; font-size:29px; color:#fff;
+  box-shadow:0 16px 34px rgba(37,211,102,.45); text-decoration:none; animation:waBounce 2.6s ease-in-out infinite;
+}
+@keyframes waBounce{0%,100%{transform:translateY(0);} 50%{transform:translateY(-9px);}}
+.wa-float:hover{transform:scale(1.12);}
 
-  .btn-primary{
-    background:linear-gradient(135deg, var(--rose) 0%, var(--rose-deep) 100%);
-    color:#fff;
-    box-shadow:0 14px 30px -10px rgba(198,33,65,.5);
-    width:100%;
-    max-width:340px;
-  }
-  .btn-primary:hover{ transform:translateY(-2px); }
-  .btn-primary:disabled{
-    opacity:.5;
-    cursor:not-allowed;
-    transform:none;
-    box-shadow:none;
-  }
+a:focus-visible, button:focus-visible, input:focus-visible, [tabindex]:focus-visible{outline:3px solid var(--red-deep); outline-offset:3px;}
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
 
-  /* ---------- Screen 3: food cards ---------- */
-  .food-grid{
-    display:grid;
-    grid-template-columns:repeat(2, 1fr);
-    gap:16px;
-    margin-bottom:30px;
-  }
-  @media (min-width:520px){
-    .food-grid{ grid-template-columns:repeat(4, 1fr); }
-  }
-
-  .food-card{
-    cursor:pointer;
-    border-radius:18px;
-    overflow:hidden;
-    background:#fff;
-    border:3px solid transparent;
-    box-shadow:0 8px 22px -10px rgba(92,36,54,.25);
-    transition:transform .2s ease, border-color .2s ease, box-shadow .2s ease;
-    position:relative;
-  }
-  .food-card:hover{ transform:translateY(-4px); }
-  .food-card.selected{
-    border-color:var(--rose);
-    box-shadow:0 14px 28px -8px rgba(230,57,80,.45);
-  }
-  .food-card.selected::after{
-    content:"❤";
-    position:absolute;
-    top:6px; left:6px;
-    background:var(--rose);
-    color:#fff;
-    width:26px; height:26px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:13px;
-    box-shadow:0 4px 10px rgba(0,0,0,.2);
-  }
-  .food-card img{
-    width:100%;
-    height:110px;
-    object-fit:cover;
-    display:block;
-  }
-  .food-card .name{
-    padding:10px 6px;
-    font-size:14px;
-    font-weight:700;
-    color:var(--deep);
-  }
-
-  /* ---------- Screen 4: final ---------- */
-  .final-heart{
-    font-size:44px;
-    margin-bottom:6px;
-    animation:pulse 1.6s ease-in-out infinite;
-  }
-  @keyframes pulse{
-    0%,100%{ transform:scale(1); }
-    50%{ transform:scale(1.15); }
-  }
-  .summary{
-    background:var(--blush);
-    border-radius:18px;
-    padding:20px 24px;
-    margin:26px auto;
-    max-width:360px;
-    text-align:right;
-    font-size:15px;
-    color:var(--deep);
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-  }
-  .summary .row{ display:flex; justify-content:space-between; gap:10px; }
-  .summary .row b{ color:var(--rose-deep); }
-
-  .final-food{
-    width:180px;
-    height:130px;
-    object-fit:cover;
-    border-radius:16px;
-    margin:14px auto 0;
-    box-shadow:0 14px 30px -10px rgba(92,36,54,.4);
-    display:block;
-  }
-
-  .footnote{
-    margin-top:28px;
-    font-size:13px;
-    color:var(--deep-soft);
-    opacity:.85;
-  }
-
-  @media (max-width:480px){
-    .card{ padding:40px 22px 34px; }
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
-  }
-
-  /* ---------- Footer credit (visible on every screen) ---------- */
-  .site-footer{
-    position:fixed;
-    left:0; right:0; bottom:0;
-    z-index:5;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    flex-wrap:wrap;
-    padding:10px 16px;
-    background:rgba(255,255,255,.85);
-    backdrop-filter:blur(6px);
-    -webkit-backdrop-filter:blur(6px);
-    border-top:1px solid rgba(230,57,80,.15);
-    font-size:12.5px;
-    color:var(--deep-soft);
-    text-align:center;
-  }
-  .site-footer b{ color:var(--deep); }
-  .wa-link{
-    display:inline-flex;
-    align-items:center;
-    gap:5px;
-    text-decoration:none;
-    font-weight:700;
-    color:#fff;
-    background:#25D366;
-    padding:6px 14px;
-    border-radius:999px;
-    font-size:12.5px;
-    transition:transform .15s ease, box-shadow .15s ease;
-    box-shadow:0 6px 16px -6px rgba(37,211,102,.6);
-  }
-  .wa-link:hover{ transform:translateY(-2px); }
-  body{ padding-bottom:64px; }
-  @media (max-width:480px){
-    .site-footer{ font-size:11.5px; padding:8px 12px; }
-    .wa-link{ font-size:11.5px; padding:5px 12px; }
-  }
+@media (max-width:480px){
+  .card{padding:42px 24px; border-radius:28px;}
+  .food-grid{grid-template-columns:repeat(2,1fr); gap:13px;}
+  .food-img{height:90px;}
+  .btn{padding:15px 28px; font-size:15px;}
+  .music-float span.label{display:none;}
+  .music-float{padding:12px;}
+}
 </style>
 </head>
 <body>
 
-<div id="petals"></div>
-
-<div class="app">
-
-  <!-- Screen 1 -->
-  <section class="card active" id="screen-1">
-    <span class="eyebrow">❤️ یک دعوت خاص  برای پری❤️💌</span>
-    <h1 class="question">با من میایی بریم رستورانت؟</h1>
-    <p class="sub">فقط یک سوال ساده است و جواب هم فقط یکی است 😒</p>
-
-    <div class="choice-zone" id="choiceZone">
-      <button class="btn btn-yes" id="yesBtn">✅ بلی</button>
-      <button class="btn btn-no" id="noBtn" style="position:relative;">❌ نخیر</button>
-    </div>
-
-    <p class="flirty-note">فکراتو بکن چوچه مقبولم😛</p>
-  </section>
-
-  <!-- Screen 2 -->
-  <section class="card" id="screen-2">
-    <span class="eyebrow">🗓️ مرحله دوم</span>
-    <h1 class="question">کی وقت داری؟</h1>
-    <p class="sub">یک تاریخ و ساعت خوب برایم انتخاب کو</p>
-
-    <div class="field-group">
-      <div class="field">
-        <label for="dateInput">تاریخ</label>
-        <input type="date" id="dateInput">
-        <span class="field-icon">📅</span>
-      </div>
-      <div class="field">
-        <label for="timeInput">ساعت</label>
-        <input type="time" id="timeInput">
-        <span class="field-icon">🕐</span>
-      </div>
-    </div>
-
-    <button class="btn btn-primary" id="toStep3" disabled>برویم بعدی 💫</button>
-  </section>
-
-  <!-- Screen 3 -->
-  <section class="card" id="screen-3">
-    <span class="eyebrow">🍽️ مرحله سوم</span>
-    <h1 class="question">چی سفارش میدهی؟</h1>
-    <p class="sub">یکی رو انتخاب کن</p>
-
-    <div class="food-grid" id="foodGrid">
-      <div class="food-card" data-food="جگر" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Preparing_lamb_liver_kebab..._(2044761712).jpg?width=500">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Preparing_lamb_liver_kebab..._(2044761712).jpg?width=500" alt="جگر" loading="lazy">
-        <div class="name">🥩 جگر</div>
-      </div>
-      <div class="food-card" data-food="قهوه" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/A_small_cup_of_coffee.JPG?width=500">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/A_small_cup_of_coffee.JPG?width=500" alt="قهوه" loading="lazy">
-        <div class="name">☕ قهوه</div>
-      </div>
-      <div class="food-card" data-food="پیزا" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Pizza.jpg?width=500">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pizza.jpg?width=500" alt="پیزا" loading="lazy">
-        <div class="name">🍕 پیزا</div>
-      </div>
-      <div class="food-card" data-food="کباب" data-img="https://commons.wikimedia.org/wiki/Special:FilePath/Persian_kebab_barbequed_in_skewers_bbq_Iran.jpg?width=500">
-        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Persian_kebab_barbequed_in_skewers_bbq_Iran.jpg?width=500" alt="کباب" loading="lazy">
-        <div class="name">🍖 کباب</div>
-      </div>
-    </div>
-
-    <button class="btn btn-primary" id="toStep4" disabled>بریم که بریم 🚗💨</button>
-  </section>
-
-  <!-- Screen 4 -->
-  <section class="card" id="screen-4">
-    <div class="final-heart">❤️</div>
-    <h1 class="question">خوشحالم که درخواست مره قبول کردی ❤️</h1>
-
-    <div class="summary">
-      <div class="row"><span>📅 تاریخ انتخاب شده:</span><b id="outDate">—</b></div>
-      <div class="row"><span>⏰ ساعت انتخاب شده:</span><b id="outTime">—</b></div>
-      <div class="row"><span>🍽️ غذای انتخاب شده:</span><b id="outFood">—</b></div>
-    </div>
-
-    <p class="sub">میایم دنبالت برای خوردن <span id="outFoodInline" style="color:var(--rose-deep); font-weight:700;">—</span> 😍</p>
-    <img class="final-food" id="outFoodImg" src="" alt="غذای انتخاب شده">
-
-    <p class="footnote">برای اینکه ازت درخواست کنم یک ویبسایت طراحی کردم چیزی نبود 🙈</p>
-  </section>
-
+<div id="loading-screen" role="status" aria-live="polite">
+  <div class="load-heart">❤️</div>
+  <div class="load-text">Loading Love...</div>
+  <div class="load-bar"><div class="load-bar-fill"></div></div>
 </div>
 
-<footer class="site-footer">
-  <span>ساخته شده توسط <b>خواجه وهاب صدیقی</b> — Full Stack Developer</span>
-  <a class="wa-link" href="https://wa.me/93787926992" target="_blank" rel="noopener">
-    💬 +93 78726992
-  </a>
+<div id="bg-layer" aria-hidden="true">
+  <div class="light-ray r1"></div>
+  <div class="light-ray r2"></div>
+  <div class="light-ray r3"></div>
+  <div id="stars-container"></div>
+</div>
+<div id="hearts-bg" aria-hidden="true"></div>
+<div id="petals-bg" aria-hidden="true"></div>
+<div id="sparkles-bg" aria-hidden="true"></div>
+<div id="cursor-trail" aria-hidden="true"></div>
+
+<button class="music-float" id="music-toggle" aria-pressed="false">
+  <span class="icon">🔇</span><span class="label" id="music-label">Turn on Romantic Music</span>
+</button>
+<div class="progress-dots" aria-hidden="true">
+  <span class="active" data-dot="1"></span>
+  <span data-dot="2"></span>
+  <span data-dot="3"></span>
+  <span data-dot="4"></span>
+</div>
+
+<main>
+<section class="page active enter" id="page1" aria-labelledby="p1-title">
+  <div class="card">
+    <div class="hero-heart" aria-hidden="true">❤️</div>
+    <span class="eyebrow">یک دعوت کوچک</span>
+    <h1 class="title-main" id="p1-title">با من میایی بریم رستورانت؟</h1>
+    <p class="subtitle">فقط یک سوال ساده است و جواب هم فقط یکی است 😒</p>
+    <div class="btn-row" id="btn-row-1">
+      <button class="btn btn-yes" id="btn-yes">❤️ بلی</button>
+      <button class="btn btn-no static-pos" id="btn-no">🙈 نخیر</button>
+    </div>
+    <p class="hint-text" id="hint-text" aria-live="polite">&nbsp;</p>
+    <p class="footer-line">فکراتو بکن عشق مقبولم ❤️</p>
+  </div>
+</section>
+
+<section class="page" id="page2" aria-labelledby="p2-title">
+  <div class="card">
+    <div class="hero-heart" aria-hidden="true">📅</div>
+    <span class="eyebrow">قدم دوم</span>
+    <h1 class="title-main" id="p2-title">کی وقت داری؟</h1>
+    <p class="subtitle">یک تاریخ و ساعت خوب برایم انتخاب کو ❤️</p>
+    <div class="picker-group">
+      <div class="field">
+        <label for="date-input">تاریخ</label>
+        <input type="date" id="date-input" required>
+      </div>
+      <div class="field">
+        <label for="time-input">ساعت</label>
+        <input type="time" id="time-input" required>
+      </div>
+    </div>
+    <p class="confirm-msg" id="p2-confirm">😍 منتظر همین روز هستم.</p>
+    <button class="btn-primary" id="btn-to-page3" disabled>مرحله بعد ➜</button>
+  </div>
+</section>
+
+<section class="page" id="page3" aria-labelledby="p3-title">
+  <div class="card">
+    <div class="hero-heart" aria-hidden="true">🍽️</div>
+    <span class="eyebrow">قدم سوم</span>
+    <h1 class="title-main" id="p3-title">چی سفارش میدهی؟</h1>
+    <p class="subtitle">یکی رو انتخاب کن عشقم</p>
+    <div class="food-grid" id="food-grid">
+      <div class="food-card" data-food="جگر" data-emoji="🥩" tabindex="0" role="button" aria-pressed="false">
+        <span class="food-emoji">🥩</span>
+        <div class="food-img" data-art="جگر" aria-label="جگر"></div>
+        <div class="food-name">جگر</div>
+      </div>
+      <div class="food-card" data-food="قهوه" data-emoji="☕" tabindex="0" role="button" aria-pressed="false">
+        <span class="food-emoji">☕</span>
+        <div class="food-img" data-art="قهوه" aria-label="قهوه"></div>
+        <div class="food-name">قهوه</div>
+      </div>
+      <div class="food-card" data-food="پیزا" data-emoji="🍕" tabindex="0" role="button" aria-pressed="false">
+        <span class="food-emoji">🍕</span>
+        <div class="food-img" data-art="پیزا" aria-label="پیزا"></div>
+        <div class="food-name">پیزا</div>
+      </div>
+      <div class="food-card" data-food="کباب" data-emoji="🍢" tabindex="0" role="button" aria-pressed="false">
+        <span class="food-emoji">🍢</span>
+        <div class="food-img" data-art="کباب" aria-label="کباب"></div>
+        <div class="food-name">کباب</div>
+      </div>
+    </div>
+    <button class="btn-primary" id="btn-to-page4" disabled>🚶‍♀️🚎 بریم که بریم</button>
+  </div>
+</section>
+
+<section class="page" id="page4" aria-labelledby="p4-title">
+  <div class="card final-card">
+    <div class="hero-heart" aria-hidden="true">💖</div>
+    <span class="eyebrow">تایید نهایی</span>
+    <h1 class="title-main" id="p4-title">خوشحالم نگفتی نه ❤️</h1>
+    <p class="subtitle">قرار ما:</p>
+    <div class="date-summary">
+      <div class="summary-chip">📅 <span id="final-date">—</span></div>
+      <div class="summary-chip">🕒 <span id="final-time">—</span></div>
+    </div>
+    <p class="subtitle" style="margin-bottom:0;">میایم دنبالت تا باهم بریم برای خوردن <strong id="final-food-name">—</strong></p>
+    <div id="final-food-img" class="selected-food-img" role="img" aria-label=""></div>
+    <p class="thankyou">برای اینکه ازت درخواست کنم، یک ویب‌سایت طراحی کردم. چیزی نبود 🙈❤️</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="made-by">ساخته شده توسط چوچه گک ❤️</div>
+  <div>
+    WhatsApp:
+    <a class="wa-link" href="https://wa.me/93787926992" target="_blank" rel="noopener">+93787926992</a>
+  </div>
 </footer>
 
+<a class="wa-float" href="https://wa.me/93787926992" target="_blank" rel="noopener" aria-label="گفتگو در واتساپ">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.44 5.13L2 22l5.1-1.53a9.86 9.86 0 0 0 4.94 1.32h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7C17.17 3.03 14.69 2 12.04 2Zm5.76 14.07c-.24.68-1.4 1.31-1.94 1.36-.5.05-1.02.24-3.4-.71-2.88-1.15-4.73-4.07-4.87-4.26-.14-.19-1.16-1.55-1.16-2.95 0-1.4.73-2.08.99-2.37.26-.29.57-.36.76-.36h.55c.18 0 .42-.03.65.5.24.55.83 1.9.9 2.04.07.14.12.31.02.5-.1.19-.15.3-.29.46-.14.16-.3.35-.43.47-.14.13-.29.27-.13.55.17.29.75 1.24 1.6 2.01 1.1.99 2.03 1.3 2.32 1.44.29.14.46.12.63-.07.17-.19.72-.84.92-1.13.19-.29.38-.24.65-.14.26.1 1.68.79 1.97.93.29.15.48.22.55.34.07.13.07.75-.17 1.43Z"/></svg>
+</a>
+
 <script>
-  // ---------------- Ambient floating petals ----------------
-  (function(){
-    const container = document.getElementById('petals');
-    const symbols = ['❤','💗','🌸','❤','💕'];
-    const count = window.innerWidth < 600 ? 14 : 22;
-    for(let i=0;i<count;i++){
-      const el = document.createElement('div');
-      el.className = 'petal';
-      el.textContent = symbols[Math.floor(Math.random()*symbols.length)];
-      const left = Math.random()*100;
-      const duration = 9 + Math.random()*10;
-      const swayDuration = 3 + Math.random()*3;
-      const delay = Math.random()*-20;
-      const size = 14 + Math.random()*14;
-      el.style.left = left + 'vw';
-      el.style.fontSize = size + 'px';
-      el.style.animationDuration = duration + 's, ' + swayDuration + 's';
-      el.style.animationDelay = delay + 's, ' + delay + 's';
-      container.appendChild(el);
-    }
-  })();
+(function(){
+  'use strict';
 
-  // ---------------- Screen navigation ----------------
-  function goTo(id){
-    document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  }
-
-  // ---------------- Screen 1: runaway "no" button ----------------
-  const yesBtn = document.getElementById('yesBtn');
-  const noBtn = document.getElementById('noBtn');
-  const zone = document.getElementById('choiceZone');
-
-  function runAway(){
-    const zoneRect = zone.getBoundingClientRect();
-    const btnRect = noBtn.getBoundingClientRect();
-    const maxX = Math.max(zoneRect.width - btnRect.width - 8, 8);
-    const maxY = Math.max(zoneRect.height - btnRect.height - 8, 8);
-    const newX = Math.random() * maxX;
-    const newY = Math.random() * maxY;
-    noBtn.style.position = 'absolute';
-    noBtn.style.left = newX + 'px';
-    noBtn.style.top = newY + 'px';
-  }
-
-  ['mouseenter','pointerdown','touchstart','click'].forEach(evt=>{
-    noBtn.addEventListener(evt, function(e){
-      e.preventDefault();
-      runAway();
-    }, {passive:false});
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      document.getElementById('loading-screen').classList.add('hidden');
+    }, 2000);
   });
 
-  yesBtn.addEventListener('click', () => goTo('screen-2'));
+  /* ============ Audio (Web Audio API, no external files) ============ */
+  var AudioCtx = window.AudioContext || window.webkitAudioContext;
+  var actx = null;
+  function ctx(){ if(!actx) actx = new AudioCtx(); return actx; }
 
-  // ---------------- Screen 2: date & time ----------------
-  const dateInput = document.getElementById('dateInput');
-  const timeInput = document.getElementById('timeInput');
-  const toStep3 = document.getElementById('toStep3');
-
-  function checkStep2(){
-    toStep3.disabled = !(dateInput.value && timeInput.value);
+  function clickBlip(freq){
+    try{
+      var c = ctx();
+      var o = c.createOscillator();
+      var g = c.createGain();
+      o.type = 'sine';
+      o.frequency.value = freq || 640;
+      g.gain.setValueAtTime(0.0001, c.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.12, c.currentTime + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, c.currentTime + 0.22);
+      o.connect(g); g.connect(c.destination);
+      o.start(); o.stop(c.currentTime + 0.24);
+    }catch(e){}
   }
-  dateInput.addEventListener('input', checkStep2);
-  timeInput.addEventListener('input', checkStep2);
 
-  toStep3.addEventListener('click', () => goTo('screen-3'));
+  var musicOn = false;
+  var musicNodes = [];
+  var musicTimer = null;
+  function playSoftMelodyStep(){
+    try{
+      var c = ctx();
+      var scale = [261.63,293.66,329.63,392.00,440.00,523.25];
+      var freq = scale[Math.floor(Math.random()*scale.length)];
+      var o = c.createOscillator(), g = c.createGain();
+      o.type = 'sine'; o.frequency.value = freq;
+      g.gain.setValueAtTime(0.0001, c.currentTime);
+      g.gain.exponentialRampToValueAtTime(0.05, c.currentTime + 0.4);
+      g.gain.exponentialRampToValueAtTime(0.0001, c.currentTime + 2.2);
+      o.connect(g); g.connect(c.destination);
+      o.start(); o.stop(c.currentTime + 2.3);
+    }catch(e){}
+  }
+  function startMusic(){
+    try{
+      var c = ctx();
+      var pad = [130.81,164.81,196.00];
+      pad.forEach(function(freq,i){
+        var o = c.createOscillator(), g = c.createGain();
+        o.type='sine'; o.frequency.value=freq; g.gain.value=0;
+        o.connect(g); g.connect(c.destination); o.start();
+        g.gain.linearRampToValueAtTime(0.018, c.currentTime + 2 + i*.3);
+        musicNodes.push({osc:o, gain:g});
+      });
+      playSoftMelodyStep();
+      musicTimer = setInterval(playSoftMelodyStep, 2600);
+    }catch(e){}
+  }
+  function stopMusic(){
+    if(musicTimer){ clearInterval(musicTimer); musicTimer = null; }
+    musicNodes.forEach(function(n){
+      try{
+        n.gain.gain.linearRampToValueAtTime(0, ctx().currentTime + 0.6);
+        n.osc.stop(ctx().currentTime + 0.7);
+      }catch(e){}
+    });
+    musicNodes = [];
+  }
+  var musicBtn = document.getElementById('music-toggle');
+  var musicLabel = document.getElementById('music-label');
+  var musicIcon = musicBtn.querySelector('.icon');
+  musicBtn.addEventListener('click', function(){
+    musicOn = !musicOn;
+    musicBtn.classList.toggle('playing', musicOn);
+    musicBtn.setAttribute('aria-pressed', musicOn);
+    musicIcon.textContent = musicOn ? '🔊' : '🔇';
+    musicLabel.textContent = musicOn ? 'Romantic Music Playing' : 'Turn on Romantic Music';
+    if(musicOn){ startMusic(); } else { stopMusic(); }
+    clickBlip(500);
+  });
 
-  // ---------------- Screen 3: food selection ----------------
-  let selectedFood = null;
-  let selectedFoodImg = null;
-  const foodCards = document.querySelectorAll('.food-card');
-  const toStep4 = document.getElementById('toStep4');
+  /* ============ Ambient background: hearts, petals, sparkles, stars ============ */
+  var heartsBg = document.getElementById('hearts-bg');
+  var petalsBg = document.getElementById('petals-bg');
+  var sparklesBg = document.getElementById('sparkles-bg');
+  var heartEmojis = ['❤️','💕','💗','💖','💘'];
+  var petalEmojis = ['🌸','🌺'];
 
-  foodCards.forEach(card => {
-    card.addEventListener('click', () => {
-      foodCards.forEach(c => c.classList.remove('selected'));
-      card.classList.add('selected');
-      selectedFood = card.dataset.food;
-      selectedFoodImg = card.dataset.img;
-      toStep4.disabled = false;
+  function spawnHeart(){
+    var h = document.createElement('div');
+    h.className = 'floating-heart';
+    h.textContent = heartEmojis[Math.floor(Math.random()*heartEmojis.length)];
+    h.style.left = (Math.random()*100) + 'vw';
+    h.style.setProperty('--drift', (Math.random()*80-40)+'px');
+    var dur = 8 + Math.random()*7;
+    h.style.animationDuration = dur + 's';
+    h.style.fontSize = (14 + Math.random()*16) + 'px';
+    heartsBg.appendChild(h);
+    setTimeout(function(){ h.remove(); }, dur*1000 + 200);
+  }
+  function spawnPetal(){
+    var p = document.createElement('div');
+    p.className = 'petal';
+    p.textContent = petalEmojis[Math.floor(Math.random()*petalEmojis.length)];
+    p.style.left = (Math.random()*100) + 'vw';
+    p.style.setProperty('--drift', (Math.random()*120-60)+'px');
+    var dur = 10 + Math.random()*8;
+    p.style.animationDuration = dur + 's';
+    p.style.fontSize = (14 + Math.random()*10) + 'px';
+    petalsBg.appendChild(p);
+    setTimeout(function(){ p.remove(); }, dur*1000 + 200);
+  }
+  function spawnSparkle(){
+    var s = document.createElement('div');
+    s.className = 'sparkle';
+    s.textContent = '✨';
+    s.style.left = (Math.random()*100) + 'vw';
+    s.style.top = (Math.random()*100) + 'vh';
+    s.style.animationDuration = (2 + Math.random()*2) + 's';
+    sparklesBg.appendChild(s);
+    setTimeout(function(){ s.remove(); }, 4500);
+  }
+  setInterval(spawnHeart, 750);
+  setInterval(spawnPetal, 1400);
+  setInterval(spawnSparkle, 900);
+  for(var i=0;i<6;i++){ setTimeout(spawnHeart, i*150); }
+  for(var j=0;j<3;j++){ setTimeout(spawnPetal, j*400); }
+
+  var starsContainer = document.getElementById('stars-container');
+  for(var s=0; s<45; s++){
+    var star = document.createElement('div');
+    star.className = 'star';
+    var size = 1 + Math.random()*2.4;
+    star.style.width = size+'px';
+    star.style.height = size+'px';
+    star.style.left = (Math.random()*100)+'vw';
+    star.style.top = (Math.random()*70)+'vh';
+    star.style.animationDuration = (2 + Math.random()*3)+'s';
+    star.style.animationDelay = (Math.random()*3)+'s';
+    starsContainer.appendChild(star);
+  }
+
+  var trail = document.getElementById('cursor-trail');
+  var isTouch = window.matchMedia('(pointer: coarse)').matches;
+  if(!isTouch){
+    var trailEmojis = ['❤️','✨','💕'];
+    var lastTrail = 0;
+    document.addEventListener('mousemove', function(e){
+      var now = Date.now();
+      if(now - lastTrail < 90) return;
+      lastTrail = now;
+      var t = document.createElement('span');
+      t.textContent = trailEmojis[Math.floor(Math.random()*trailEmojis.length)];
+      t.style.position = 'fixed';
+      t.style.left = e.clientX + 'px';
+      t.style.top = e.clientY + 'px';
+      t.style.pointerEvents = 'none';
+      t.style.zIndex = 9999;
+      t.style.fontSize = '14px';
+      t.style.transition = 'transform 0.8s ease, opacity 0.8s ease';
+      document.body.appendChild(t);
+      requestAnimationFrame(function(){
+        t.style.transform = 'translateY(-30px) scale(0.4)';
+        t.style.opacity = '0';
+      });
+      setTimeout(function(){ t.remove(); }, 850);
+    });
+  }
+
+  /* ============ Page navigation with zoom/fade/blur ============ */
+  var pages = ['page1','page2','page3','page4'];
+  function goToPage(n){
+    var current = document.querySelector('.page.active');
+    if(current){
+      current.classList.add('leave');
+      current.classList.remove('enter');
+    }
+    setTimeout(function(){
+      pages.forEach(function(id, idx){
+        var el = document.getElementById(id);
+        if(idx === n-1){
+          el.classList.add('active');
+          el.classList.remove('leave');
+          void el.offsetWidth;
+          el.classList.add('enter');
+        } else if(el !== current){
+          el.classList.remove('active');
+        }
+      });
+      if(current) current.classList.remove('active');
+      document.querySelectorAll('.progress-dots span').forEach(function(dot, idx){
+        dot.classList.toggle('active', idx === n-1);
+      });
+      window.scrollTo({top:0, behavior:'smooth'});
+    }, 420);
+  }
+
+  /* ============ PAGE 1: dodging "no" button ============ */
+  var btnNo = document.getElementById('btn-no');
+  var btnYes = document.getElementById('btn-yes');
+  var hintText = document.getElementById('hint-text');
+  var funnyTexts = ['😂 نه دیگه','😝 امکان ندارد','❤️ فقط بلی','🙈 اشتباه زدی','😅 جواب فقط بلی است','🥹 باز هم تلاش؟'];
+  var finalFunnyText = '😂 بس کن دیگه... فقط بلی را انتخاب کن عشق مقبولم ❤️';
+  var dodgeCount = 0;
+  var noIsFixed = false;
+
+  function activateFixedNo(){
+    if(noIsFixed) return;
+    noIsFixed = true;
+    var rect = btnNo.getBoundingClientRect();
+    btnNo.classList.remove('static-pos');
+    btnNo.style.left = rect.left + 'px';
+    btnNo.style.top = rect.top + 'px';
+  }
+
+  function dodge(){
+    activateFixedNo();
+    var w = btnNo.offsetWidth || 120;
+    var h = btnNo.offsetHeight || 54;
+    var maxX = Math.max(10, window.innerWidth - w - 20);
+    var maxY = Math.max(10, window.innerHeight - h - 20);
+    var newX = Math.random() * maxX;
+    var newY = Math.random() * maxY;
+    btnNo.style.left = newX + 'px';
+    btnNo.style.top = newY + 'px';
+    dodgeCount++;
+    if(dodgeCount >= 10){
+      hintText.textContent = finalFunnyText;
+    } else if(dodgeCount >= 3){
+      hintText.textContent = funnyTexts[Math.floor(Math.random()*funnyTexts.length)];
+    }
+    clickBlip(300);
+  }
+
+  function isNear(x, y){
+    var rect = btnNo.getBoundingClientRect();
+    var cx = rect.left + rect.width/2;
+    var cy = rect.top + rect.height/2;
+    var dist = Math.hypot(x-cx, y-cy);
+    return dist < 115;
+  }
+
+  document.addEventListener('mousemove', function(e){
+    if(isNear(e.clientX, e.clientY)) dodge();
+  });
+  btnNo.addEventListener('mouseenter', dodge);
+  btnNo.addEventListener('touchstart', function(e){ e.preventDefault(); dodge(); }, {passive:false});
+  document.addEventListener('touchmove', function(e){
+    var t = e.touches[0];
+    if(t && isNear(t.clientX, t.clientY)) dodge();
+  }, {passive:true});
+  btnNo.addEventListener('click', function(e){ e.preventDefault(); dodge(); });
+  btnNo.addEventListener('focus', dodge);
+
+  btnYes.addEventListener('click', function(){
+    clickBlip(720);
+    goToPage(2);
+  });
+
+  /* ============ PAGE 2 ============ */
+  var dateInput = document.getElementById('date-input');
+  var timeInput = document.getElementById('time-input');
+  var btnToPage3 = document.getElementById('btn-to-page3');
+  var p2Confirm = document.getElementById('p2-confirm');
+
+  var today = new Date();
+  var minDate = today.toISOString().split('T')[0];
+  dateInput.setAttribute('min', minDate);
+
+  function checkPage2(){
+    var ok = dateInput.value && timeInput.value;
+    btnToPage3.disabled = !ok;
+    p2Confirm.classList.toggle('show', !!ok);
+  }
+  dateInput.addEventListener('change', function(){ checkPage2(); if(dateInput.value) clickBlip(500); });
+  timeInput.addEventListener('change', function(){ checkPage2(); if(timeInput.value) clickBlip(500); });
+
+  btnToPage3.addEventListener('click', function(){
+    clickBlip(720);
+    goToPage(3);
+  });
+
+  /* ============ Custom hand-built SVG food illustrations ============ */
+  /* Each dish gets its own accurate illustration matching its name, drawn to fit the site's palette. */
+  function foodArtSVG(key, uid){
+    if(key === 'قهوه'){
+      return '<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">'+
+        '<defs><linearGradient id="bgQ'+uid+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe3ea"/><stop offset="1" stop-color="#f2d6ee"/></linearGradient>'+
+        '<linearGradient id="cupQ'+uid+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b3a2a"/><stop offset="1" stop-color="#3f2016"/></linearGradient>'+
+        '<linearGradient id="coffeeQ'+uid+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a9694b"/><stop offset="1" stop-color="#6b3a2a"/></linearGradient></defs>'+
+        '<rect width="200" height="200" fill="url(#bgQ'+uid+')"/>'+
+        '<path d="M60 150 h70 a10 10 0 0 0 10 -10 v-55 h-90 v55 a10 10 0 0 0 10 10 z" fill="#fff"/>'+
+        '<path d="M68 96 h62 v42 a8 8 0 0 1 -8 8 h-46 a8 8 0 0 1 -8 -8 z" fill="url(#cupQ'+uid+')"/>'+
+        '<ellipse cx="99" cy="98" rx="31" ry="8" fill="url(#coffeeQ'+uid+')"/>'+
+        '<path d="M140 100 q22 -2 22 20 q0 22 -24 20" fill="none" stroke="#6b3a2a" stroke-width="8" stroke-linecap="round"/>'+
+        '<path d="M40 150 h120" stroke="#e6b98f" stroke-width="8" stroke-linecap="round"/>'+
+        '<path d="M78 80 q-6 -12 2 -20 q8 -8 2 -20" fill="none" stroke="#cda679" stroke-width="4" stroke-linecap="round" opacity=".75"/>'+
+        '<path d="M99 80 q-6 -12 2 -20 q8 -8 2 -20" fill="none" stroke="#cda679" stroke-width="4" stroke-linecap="round" opacity=".6"/>'+
+        '<path d="M120 80 q-6 -12 2 -20 q8 -8 2 -20" fill="none" stroke="#cda679" stroke-width="4" stroke-linecap="round" opacity=".75"/>'+
+        '</svg>';
+    }
+    if(key === 'پیزا'){
+      return '<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">'+
+        '<defs><linearGradient id="bgP'+uid+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe6c9" /><stop offset="1" stop-color="#ffd7e2"/></linearGradient>'+
+        '<linearGradient id="crustP'+uid+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8b464"/><stop offset="1" stop-color="#c98a3c"/></linearGradient></defs>'+
+        '<rect width="200" height="200" fill="url(#bgP'+uid+')"/>'+
+        '<path d="M100 46 L162 158 A72 72 0 0 1 38 158 Z" fill="url(#crustP'+uid+')"/>'+
+        '<path d="M100 60 L150 150 A58 58 0 0 1 50 150 Z" fill="#ffd25c"/>'+
+        '<path d="M100 60 L150 150 A58 58 0 0 1 50 150 Z" fill="#ffe08a" opacity=".5"/>'+
+        '<circle cx="92" cy="92" r="9" fill="#c9425c"/>'+
+        '<circle cx="118" cy="112" r="9" fill="#c9425c"/>'+
+        '<circle cx="86" cy="128" r="8" fill="#c9425c"/>'+
+        '<circle cx="112" cy="138" r="7" fill="#c9425c"/>'+
+        '<ellipse cx="104" cy="100" rx="5" ry="3" fill="#3ecf7a"/>'+
+        '<ellipse cx="128" cy="128" rx="5" ry="3" fill="#3ecf7a"/>'+
+        '<ellipse cx="76" cy="110" rx="5" ry="3" fill="#3ecf7a"/>'+
+        '</svg>';
+    }
+    if(key === 'کباب'){
+      return '<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">'+
+        '<defs><linearGradient id="bgK'+uid+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffd7e2"/><stop offset="1" stop-color="#e6d6f7"/></linearGradient>'+
+        '<linearGradient id="meatK'+uid+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a8502e"/><stop offset="1" stop-color="#7a3520"/></linearGradient></defs>'+
+        '<rect width="200" height="200" fill="url(#bgK'+uid+')"/>'+
+        '<ellipse cx="100" cy="150" rx="66" ry="14" fill="#fff" opacity=".85"/>'+
+        '<line x1="34" y1="88" x2="168" y2="88" stroke="#cda679" stroke-width="6" stroke-linecap="round"/>'+
+        '<circle cx="168" cy="88" r="5" fill="#8a5a2e"/>'+
+        '<rect x="46" y="70" width="26" height="34" rx="7" fill="url(#meatK'+uid+')" transform="rotate(-6 59 87)"/>'+
+        '<rect x="78" y="68" width="22" height="30" rx="9" fill="#9cc95c" transform="rotate(4 89 83)"/>'+
+        '<rect x="104" y="70" width="26" height="34" rx="7" fill="url(#meatK'+uid+')" transform="rotate(-4 117 87)"/>'+
+        '<rect x="136" y="68" width="22" height="30" rx="9" fill="#e8677f" transform="rotate(5 147 83)"/>'+
+        '</svg>';
+    }
+    /* جگر — liver kebab, distinct from کباب: uniform dark liver pieces + herb + lemon garnish */
+    return '<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">'+
+      '<defs><linearGradient id="bgJ'+uid+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7d6d6"/><stop offset="1" stop-color="#e6c2c9"/></linearGradient>'+
+      '<linearGradient id="liverJ'+uid+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a2634"/><stop offset="1" stop-color="#4a1723"/></linearGradient></defs>'+
+      '<rect width="200" height="200" fill="url(#bgJ'+uid+')"/>'+
+      '<ellipse cx="100" cy="150" rx="66" ry="14" fill="#fff" opacity=".85"/>'+
+      '<line x1="34" y1="86" x2="168" y2="86" stroke="#cda679" stroke-width="6" stroke-linecap="round"/>'+
+      '<circle cx="168" cy="86" r="5" fill="#8a5a2e"/>'+
+      '<rect x="44" y="68" width="24" height="32" rx="6" fill="url(#liverJ'+uid+')" transform="rotate(-5 56 84)"/>'+
+      '<rect x="72" y="66" width="24" height="34" rx="6" fill="url(#liverJ'+uid+')" transform="rotate(4 84 83)"/>'+
+      '<rect x="100" y="68" width="24" height="32" rx="6" fill="url(#liverJ'+uid+')" transform="rotate(-4 112 84)"/>'+
+      '<rect x="128" y="66" width="24" height="34" rx="6" fill="url(#liverJ'+uid+')" transform="rotate(5 140 83)"/>'+
+      '<circle cx="150" cy="140" r="14" fill="#ffd25c"/>'+
+      '<path d="M150 128 v24 M138 140 h24" stroke="#e8b93c" stroke-width="2"/>'+
+      '<path d="M50 138 q6 -10 14 -4 q6 6 14 -2" fill="none" stroke="#3ecf7a" stroke-width="4" stroke-linecap="round"/>'+
+      '</svg>';
+  }
+  var FOOD_ART = {};
+  document.querySelectorAll('.food-img[data-art]').forEach(function(el, idx){
+    var key = el.getAttribute('data-art');
+    var svg = foodArtSVG(key, 'card'+idx);
+    el.innerHTML = svg;
+    FOOD_ART[key] = svg;
+  });
+
+  /* ============ PAGE 3 ============ */
+  var foodCards = document.querySelectorAll('.food-card');
+  var btnToPage4 = document.getElementById('btn-to-page4');
+  var selectedFood = null, selectedEmoji = null;
+
+  function selectFood(card){
+    foodCards.forEach(function(c){ c.classList.remove('selected'); c.setAttribute('aria-pressed','false'); });
+    card.classList.add('selected');
+    card.setAttribute('aria-pressed','true');
+    selectedFood = card.getAttribute('data-food');
+    selectedEmoji = card.getAttribute('data-emoji');
+    btnToPage4.disabled = false;
+    clickBlip(560);
+  }
+  foodCards.forEach(function(card){
+    card.addEventListener('click', function(){ selectFood(card); });
+    card.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); selectFood(card); }
     });
   });
 
-  toStep4.addEventListener('click', () => {
-    // format date nicely
-    let dateText = dateInput.value;
-    try{
-      const d = new Date(dateInput.value);
-      dateText = d.toLocaleDateString('fa-IR');
-    }catch(e){}
-
-    document.getElementById('outDate').textContent = dateText || '—';
-    document.getElementById('outTime').textContent = timeInput.value || '—';
-    document.getElementById('outFood').textContent = selectedFood || '—';
-    document.getElementById('outFoodInline').textContent = selectedFood || '—';
-    document.getElementById('outFoodImg').src = selectedFoodImg || '';
-    goTo('screen-4');
+  btnToPage4.addEventListener('click', function(){
+    clickBlip(800);
+    fillFinalPage();
+    goToPage(4);
+    setTimeout(launchCelebration, 450);
   });
-</script>
 
+  /* ============ PAGE 4 ============ */
+  function formatDate(str){
+    try{
+      var d = new Date(str + 'T00:00:00');
+      return d.toLocaleDateString('fa-IR', {year:'numeric', month:'long', day:'numeric'});
+    }catch(e){ return str; }
+  }
+  function fillFinalPage(){
+    document.getElementById('final-date').textContent = formatDate(dateInput.value);
+    document.getElementById('final-time').textContent = timeInput.value;
+    document.getElementById('final-food-name').textContent = selectedEmoji + ' ' + selectedFood;
+    var finalArt = document.getElementById('final-food-img');
+    finalArt.innerHTML = foodArtSVG(selectedFood, 'final');
+    finalArt.setAttribute('aria-label', selectedFood);
+  }
+
+  function launchCelebration(){
+    var confettiLayer = document.createElement('div');
+    confettiLayer.className = 'confetti-layer';
+    document.body.appendChild(confettiLayer);
+    var colors = ['#e8677f','#c9425c','#d9a679','#fff0f3','#ffd7e2','#c9a7e8'];
+    for(var i=0;i<70;i++){
+      (function(){
+        var p = document.createElement('div');
+        p.className = 'confetti-piece';
+        var size = 6 + Math.random()*7;
+        p.style.width = size + 'px';
+        p.style.height = (size*0.4) + 'px';
+        p.style.background = colors[Math.floor(Math.random()*colors.length)];
+        p.style.left = (Math.random()*100) + 'vw';
+        p.style.animationDuration = (2.5 + Math.random()*2.5) + 's';
+        p.style.animationDelay = (Math.random()*0.6) + 's';
+        confettiLayer.appendChild(p);
+      })();
+    }
+    setTimeout(function(){ confettiLayer.remove(); }, 6000);
+
+    var balloonLayer = document.createElement('div');
+    balloonLayer.className = 'balloon-layer';
+    document.body.appendChild(balloonLayer);
+    for(var b=0; b<9; b++){
+      (function(){
+        var bal = document.createElement('div');
+        bal.className = 'balloon';
+        bal.textContent = '🎈';
+        bal.style.left = (Math.random()*90) + 'vw';
+        bal.style.animationDelay = (Math.random()*1.2) + 's';
+        bal.style.animationDuration = (5.5 + Math.random()*2) + 's';
+        balloonLayer.appendChild(bal);
+      })();
+    }
+    setTimeout(function(){ balloonLayer.remove(); }, 9000);
+
+    var rainLayer = document.createElement('div');
+    rainLayer.className = 'emoji-rain';
+    document.body.appendChild(rainLayer);
+    var rainEmojis = ['🎉','🥳','🎊'];
+    for(var r=0; r<40; r++){
+      (function(){
+        var re = document.createElement('div');
+        re.className = 'rain-emoji';
+        re.textContent = rainEmojis[Math.floor(Math.random()*rainEmojis.length)];
+        re.style.left = (Math.random()*100) + 'vw';
+        re.style.animationDuration = (3 + Math.random()*3) + 's';
+        re.style.animationDelay = (Math.random()*1.5) + 's';
+        rainLayer.appendChild(re);
+      })();
+    }
+    setTimeout(function(){ rainLayer.remove(); }, 8000);
+  }
+
+  window.addEventListener('resize', function(){
+    if(!noIsFixed) return;
+    var rect = btnNo.getBoundingClientRect();
+    var maxX = window.innerWidth - rect.width - 10;
+    var maxY = window.innerHeight - rect.height - 10;
+    btnNo.style.left = Math.min(parseFloat(btnNo.style.left)||0, maxX) + 'px';
+    btnNo.style.top = Math.min(parseFloat(btnNo.style.top)||0, maxY) + 'px';
+  });
+
+})();
+</script>
 </body>
 </html>
